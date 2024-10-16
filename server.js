@@ -25,8 +25,8 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(500, { "Content-Type": "text/plain" });
       res.end("server error");
     }
-  } else if (pathName === "/" && Object.keys(query).length === 0) {
-    if (query.hello) {
+  } else if (pathName === "/") {
+    if (Object.keys(query).length === 0) {
       res.writeHead(200, { "Content-Type": "text/plain" });
       res.end("hello world");
     } else {
@@ -36,6 +36,6 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT,()=>{
-    console.log(`"Сервер работает http://127.0.0.1:${PORT}!!"`)
-})
+server.listen(PORT, () => {
+  console.log(`"Сервер работает http://127.0.0.1:${PORT}!!"`);
+});
