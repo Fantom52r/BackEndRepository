@@ -31,7 +31,7 @@ const server = http.createServer(async (req, res) => {
       res.end("hello world");
     } else {
       res.writeHead(500, { "Content-Type": "text/plain" });
-      res.end("enter Name");
+      res.end("");
     }
   }
 });
